@@ -11,9 +11,9 @@ Oculus Browser >10.2 (Quest update >19.0 and threejs r119).<br>
 "WebXR experiences with joints tracking" enabled.<br>
 "WebXR experiences with hands tracking" disabled.<br>
 
-
-
 ## 1. Minimal Threejs VR Hand Input
+
+<img src="images/1-threejs-vr-hand-input-physics.gif" width="320">
 
 ## References
 
