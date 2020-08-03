@@ -7,7 +7,13 @@ Oculus Quest.<br>
 
 Oculus Browser >10.2 (Quest update >19.0 and threejs r119).<br>
 
-## Minimal Threejs VR Hand Input
+"chrome://flags/#webxr-hands" in Oculus Browser.<br>
+"WebXR experiences with joints tracking" enabled.<br>
+"WebXR experiences with hands tracking" disabled.<br>
+
+
+
+## 1. Minimal Threejs VR Hand Input
 
 ## References
 
