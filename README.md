@@ -15,6 +15,8 @@ Oculus Browser >10.2 (Quest update >19.0 and threejs r119).<br>
 
 <img src="images/1-threejs-vr-hand-input-physics.gif" width="320">
 
+Files (except .html) in /build and /examples are from threejs r119. These are minimal files to start VR with joints tracking. Since it is experimental in Oculus Browser, it may break in future update of browser or threejs. Currently, a controller is needed to "Enter VR". Nevertheless, it is fantastic that Oculus has WebXR joints tracking in its browser and three.js in its library.<br>
+
 ## References
 
 July 29, 2020 Threejs r119 added experimental Hand Input API support.<br>
