@@ -22,6 +22,8 @@ With an Oculus Quest, open Oculus Browser to link (and "Enter VR" with controlle
 
 [https://physicslibrary.github.io/Threejs-VR-Hand-Input-Physics/examples/threejs_vr_hand_input_physics.html](https://physicslibrary.github.io/Threejs-VR-Hand-Input-Physics/examples/threejs_vr_hand_input_physics.html)
 
+Put controllers down, hold hands in front of headset until Quest recognizes them.
+
 To exit simulation, use Oculus Quest right hand gesture of facing palm with index finger and thumb touching (or press left Touch controller menu button).<br>
 
 The .html codes in Threejs-VR-Hand-Input-Physics use a subset of three.js r119 to start VR with joints tracking. Since it is experimental, it may break in future update of browser or threejs. Also, a controller is needed to "Enter VR". Nevertheless, it is fantastic that Oculus has WebXR joints tracking in its browser and three.js is making it accessible in its library.<br>
@@ -38,7 +40,7 @@ The .html codes in Threejs-VR-Hand-Input-Physics are developed on a Raspberry Pi
 
 An example of left palm-up to make a box visible (open a menus or change variables). The y-positions of two red cubes are used to compute a number when the palm is facing up.
 
-[https://physicslibrary.github.io/Threejs-VR-Hand-Input-Physics/examples/threejs_vr_hand_input_physics.html](https://physicslibrary.github.io/Threejs-VR-Hand-Input-Physics/examples/threejs_vr_hand_input_physics.html)
+[https://physicslibrary.github.io/Threejs-VR-Hand-Input-Physics/examples/2-threejs_vr_hand_input_physics.html](https://physicslibrary.github.io/Threejs-VR-Hand-Input-Physics/examples/2-threejs_vr_hand_input_physics.html)
 
 ## References
 
