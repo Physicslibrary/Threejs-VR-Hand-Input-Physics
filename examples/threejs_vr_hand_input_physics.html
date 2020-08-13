@@ -86,11 +86,15 @@ https://twitter.com/fernandojsg/status/1286381837301022721
 
 import * as THREE from '../build/three.module.js';
 import { VRButton } from './jsm/webxr/VRButton.js';
+import { XRControllerModelFactory } from './jsm/webxr/XRControllerModelFactory.js';
 import { XRHandModelFactory } from './jsm/webxr/XRHandModelFactory.js';
 
+var container;
 var camera, scene, renderer;
 var hand1, hand2;
-
+var controller1, controller2;
+var controllerGrip1, controllerGrip2;
+	
 var trail = [];
 var i;
 
@@ -98,7 +102,10 @@ init();
 animate();
 
 function init() {
-				
+
+	container = document.createElement( 'div' );
+	document.body.appendChild( container );
+	
 	scene = new THREE.Scene();
 	scene.background = new THREE.Color(0x505050);
 
@@ -120,15 +127,30 @@ function init() {
 
 	renderer = new THREE.WebGLRenderer({antialias:true});
 	renderer.setPixelRatio(window.devicePixelRatio );
-	renderer.setSize(window.innerWidth, window.innerHeight);	
-	document.body.appendChild(renderer.domElement);
-	document.body.appendChild(VRButton.createButton(renderer));
+	renderer.setSize(window.innerWidth, window.innerHeight);
+	renderer.shadowMap.enabled = false;
 	renderer.xr.enabled = true;
 
-	var handModelFactory = new XRHandModelFactory().setPath( "./models/fbx/" );
+	container.body.appendChild(renderer.domElement);
+	document.body.appendChild(VRButton.createButton(renderer));
+	
+	// controllers
 
-// add a hand
+	controller1 = renderer.xr.getController( 0 );
+	scene.add( controller1 );
 
+	controller2 = renderer.xr.getController( 1 );
+	scene.add( controller2 );
+
+	var controllerModelFactory = new XRControllerModelFactory();
+	var handModelFactory = new XRHandModelFactory().setPath( "./models/" );
+	
+// Hand 0
+
+	controllerGrip1 = renderer.xr.getControllerGrip( 0 );
+	controllerGrip1.add( controllerModelFactory.createControllerModel( controllerGrip1 ) );
+	scene.add( controllerGrip1 );
+	
 	hand1 = renderer.xr.getHand( 0 );
 	hand1.add( handModelFactory.createHandModel( hand1, "boxes") );
 //	hand1.add( handModelFactory.createHandModel( hand1, "spheres") );
@@ -136,8 +158,12 @@ function init() {
 //	hand1.add( handModelFactory.createHandModel( hand1, "oculus") );
 	scene.add( hand1 );
 
-// add a hand
+// Hand 1
 
+	controllerGrip2 = renderer.xr.getControllerGrip( 1 );
+	controllerGrip2.add( controllerModelFactory.createControllerModel( controllerGrip2 ) );
+	scene.add( controllerGrip2 );
+	
 	hand2 = renderer.xr.getHand( 1 );
 	hand2.add( handModelFactory.createHandModel( hand2, "boxes") );
 	scene.add( hand2 );
