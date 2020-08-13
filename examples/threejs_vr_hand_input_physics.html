@@ -131,7 +131,7 @@ function init() {
 	renderer.shadowMap.enabled = false;
 	renderer.xr.enabled = true;
 
-	container.body.appendChild(renderer.domElement);
+	container.appendChild(renderer.domElement);
 	document.body.appendChild(VRButton.createButton(renderer));
 	
 	// controllers
