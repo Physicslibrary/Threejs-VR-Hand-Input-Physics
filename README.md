@@ -32,6 +32,14 @@ The .html codes in Threejs-VR-Hand-Input-Physics are developed on a Raspberry Pi
 
 [https://github.com/Physicslibrary/Threejs-WebXR-67P](https://github.com/Physicslibrary/Threejs-WebXR-67P)
 
+## 2. Threejs VR Hand Input Palm-Up Gesture
+
+<img src="images/2-threejs-vr-hand-input-physics.gif" width="320">
+
+An example of left palm-up to make a box visible (open a menus or change variables). The y-positions of two red cubes are used to compute a number when the palm is facing up.
+
+[https://physicslibrary.github.io/Threejs-VR-Hand-Input-Physics/examples/threejs_vr_hand_input_physics.html](https://physicslibrary.github.io/Threejs-VR-Hand-Input-Physics/examples/threejs_vr_hand_input_physics.html)
+
 ## References
 
 July 29, 2020 Threejs r119 added experimental Hand Input API support.<br>
