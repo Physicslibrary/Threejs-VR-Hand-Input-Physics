@@ -24,9 +24,9 @@ With an Oculus Quest, open Oculus Browser to link (and "Enter VR" with controlle
 
 Put controllers down, hold hands in front of headset until Quest recognizes them.
 
-To exit simulation, use Oculus Quest right hand gesture of facing palm with index finger and thumb touching (or press left Touch controller menu button).<br>
+To exit simulation, use Oculus Quest left hand gesture of facing palm with index finger and thumb touching (or press left Touch controller menu button).<br>
 
-The .html codes in Threejs-VR-Hand-Input-Physics use a subset of three.js r119 to start VR with joints tracking. Since it is experimental, it may break in future update of browser or threejs. Also, a controller is needed to "Enter VR". Nevertheless, it is fantastic that Oculus has WebXR joints tracking in its browser and three.js is making it accessible in its library.<br>
+The .html codes in Threejs-VR-Hand-Input-Physics use a subset of three.js r119 to start VR with joints tracking. Since it is experimental, it may break in future update of browser or threejs. ~~Also, a controller is needed to "Enter VR".~~ (Oculus Browser >12.0 update, now "Enter VR" with hands! No controllers required.) Nevertheless, it is fantastic that Oculus has WebXR joints tracking in its browser and three.js is making it accessible in its library.<br>
 
 This example is not about physics except some kinematics. The right index finger plots 100 3D ticks. Assuming Oculus Quest 72Hz framerate (don't know sampling rate of joints tracking or time to determine joints' positions), time between each tick is ~13.9ms. The distance between two consecutive ticks is the distance the index finger moves in ~13.9ms. In the animated gif above, ticks are close together when finger accelerates (+/-) at peaks of sine wave and further apart between peaks.
 
