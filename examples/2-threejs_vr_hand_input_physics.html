@@ -153,7 +153,7 @@ function init() {
 	controllerGrip1.add( controllerModelFactory.createControllerModel( controllerGrip1 ) );
 	scene.add( controllerGrip1 );
 
-	hand1 = renderer.xr.getHand( 0 );
+	hand1 = renderer.xr.getHand( 1 );
 	hand1.add( handModelFactory.createHandModel(hand1, "boxes") );
 	scene.add( hand1 );
 
@@ -162,7 +162,7 @@ function init() {
 	controllerGrip2.add( controllerModelFactory.createControllerModel( controllerGrip2 ) );
 	scene.add( controllerGrip2 );
 
-	hand2 = renderer.xr.getHand( 1 );
+	hand2 = renderer.xr.getHand( 0 );
 	hand2.add( handModelFactory.createHandModel(hand2, "boxes") );
 	scene.add( hand2 );
 
