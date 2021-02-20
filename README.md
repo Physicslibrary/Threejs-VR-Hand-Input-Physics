@@ -22,6 +22,11 @@ With an Oculus Quest, open Oculus Browser to link (and "Enter VR" with controlle
 
 [https://physicslibrary.github.io/Threejs-VR-Hand-Input-Physics/examples/threejs_vr_hand_input_physics.html](https://physicslibrary.github.io/Threejs-VR-Hand-Input-Physics/examples/threejs_vr_hand_input_physics.html)
 
+(February 20, 2021.<br>
+Oculus Quest (version>25) and WebXR (https://www.w3.org/TR/webxr-hand-input-1/) updates.<br>
+"line trail[i].position.x = hand2.joints[XRHand.INDEX_PHALANX_TIP].position.x" not working and is commented out so no black screen and just display hands' joints.<br>
+Experimenting with codes to see what is working.)<br>
+
 Put controllers down, hold hands in front of headset until Quest recognizes them.
 
 To exit simulation, use Oculus Quest left hand gesture of facing palm with index finger and thumb touching (or press left Touch controller menu button).<br>
