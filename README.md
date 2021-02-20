@@ -1,4 +1,4 @@
-# Threejs-VR-Hand-Input-Physics
+# Threejs-VR-Hand-Input-Physics (broken, Oculus Quest Version 25 Update, some codes commented out, experimenting)
 
 Explore physics simulations with Threejs VR hand input
 
