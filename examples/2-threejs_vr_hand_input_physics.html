@@ -68,7 +68,8 @@ https://github.com/mrdoob/three.js/tree/dev/examples
 	<body>
 
 		<div id="info">
-			<a href="https://threejs.org" target="_blank" rel="noopener">three.js</a> VR Hand Controller Input
+			<a href="https://threejs.org" target="_blank" rel="noopener">three.js</a> VR Hand Controller Input<br/>
+			(Oculus Browser with #webxr-hands flag enabled)
 		</div>
 
 		<script type="module">
@@ -94,8 +95,8 @@ animate();
 
 function init() {
 
-//	container = document.createElement( 'div' );
-//	document.body.appendChild( container );
+	container = document.createElement( 'div' );
+	document.body.appendChild( container );
 
 	scene = new THREE.Scene();
 	scene.background = new THREE.Color(0x505050);
@@ -123,8 +124,7 @@ function init() {
 	renderer.shadowMap.enabled = false;
 	renderer.xr.enabled = true;
 
-//	container.appendChild( renderer.domElement );
-	document.body.appendChild( renderer.domElement );
+	container.appendChild( renderer.domElement );
 
 	document.body.appendChild( VRButton.createButton( renderer ) );
 
@@ -137,7 +137,7 @@ function init() {
 	scene.add( controller2 );
 
 	var controllerModelFactory = new XRControllerModelFactory();
-	var handModelFactory = new XRHandModelFactory().setPath( "./models/" );
+//	var handModelFactory = new XRHandModelFactory().setPath( "./models/" );
 
 	// Hand 1
 	controllerGrip1 = renderer.xr.getControllerGrip( 0 );
@@ -157,13 +157,13 @@ function init() {
 	hand2.add( handModelFactory.createHandModel(hand2, "boxes") );
 	scene.add( hand2 );
 
-	geometry1 = new THREE.BoxBufferGeometry(0.01,0.01,0.01);
-	end1 = new THREE.Mesh( geometry1, new THREE.MeshBasicMaterial({color: 0xff0000}));
-	end1.material.wireframe = true;
-	end1.position.y = 0.02;
+//	geometry1 = new THREE.BoxBufferGeometry(0.01,0.01,0.01);
+//	end1 = new THREE.Mesh( geometry1, new THREE.MeshBasicMaterial({color: 0xff0000}));
+//	end1.material.wireframe = true;
+//	end1.position.y = 0.02;
 //	hand1.joints['WRIST'].add(end1);
 //	hand1.joints[XRHand.WRIST].add(end1);
-	hand1.joints['index-finger-tip'].add(end1);
+//	hand1.joints['index-finger-tip'].add(end1);
 
 //	geometry2 = new THREE.BoxBufferGeometry(0.01,0.01,0.01);
 //	end2 = new THREE.Mesh( geometry2, new THREE.MeshBasicMaterial({color: 0xff0000}));
