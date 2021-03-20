@@ -103,8 +103,12 @@ function init() {
 
 	camera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.innerHeight, 0.1, 10 );
 	camera.position.set( 0, 1.6, 3 );
+	
+	controls = new OrbitControls( camera, container );
+	controls.target.set( 0, 1.6, 0 );
+	controls.update();
 
-// add a floor
+	// add a floor
 
 	var color = new THREE.Color(0x00ff00);
 	var floor = new THREE.GridHelper(8,8,color,color);
@@ -140,6 +144,7 @@ function init() {
 	var handModelFactory = new XRHandModelFactory().setPath( "./models/" );
 
 	// Hand 1
+	
 	controllerGrip1 = renderer.xr.getControllerGrip( 0 );
 	controllerGrip1.add( controllerModelFactory.createControllerModel( controllerGrip1 ) );
 	scene.add( controllerGrip1 );
@@ -149,6 +154,7 @@ function init() {
 //	scene.add( hand1 );
 
 	// Hand 2
+	
 	controllerGrip2 = renderer.xr.getControllerGrip( 1 );
 	controllerGrip2.add( controllerModelFactory.createControllerModel( controllerGrip2 ) );
 	scene.add( controllerGrip2 );
