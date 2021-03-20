@@ -198,9 +198,9 @@ function animate() {
 
 function render() {
 
-	trail[i].position.x = hand2.joints['thumb-tip'].position.x;
-	trail[i].position.y = hand2.joints['thumb-tip'].position.y;
-	trail[i].position.z = hand2.joints['thumb-tip'].position.z;
+	trail[i].position.x = hand2.joints['wrist'].position.x;
+	trail[i].position.y = hand2.joints['wrist'].position.y;
+	trail[i].position.z = hand2.joints['wrist'].position.z;
 
 	i++;
 	if(i>99){
