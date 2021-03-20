@@ -161,20 +161,22 @@ function init() {
 	end1 = new THREE.Mesh( geometry1, new THREE.MeshBasicMaterial({color: 0xff0000}));
 	end1.material.wireframe = true;
 	end1.position.y = 0.02;
-	hand1.joints['WRIST'].add(end1);
+//	hand1.joints['WRIST'].add(end1);
+//	hand1.joints[XRHand.WRIST].add(end1);
+	hand1.joints['index-finger-tip'].add(end1);
 
 	geometry2 = new THREE.BoxBufferGeometry(0.01,0.01,0.01);
 	end2 = new THREE.Mesh( geometry2, new THREE.MeshBasicMaterial({color: 0xff0000}));
 	end2.material.wireframe = true;
 	end2.position.y = 0.25;
-	hand1.joints['WRIST'].add(end2);
+//	hand1.joints['WRIST'].add(end2);
 	
 	box = new THREE.EdgesGeometry(new THREE.BoxBufferGeometry(0.1,0.1,0.1));
 	box = new THREE.LineSegments(box,new THREE.LineBasicMaterial({color: 0xffff00}));
 	box.position.x = 0.1;
 	box.position.y = 0.1;
 	box.position.z = 0.15;
-	hand1.joints['WRIST'].add(box);
+//	hand1.joints['WRIST'].add(box);
 	box.visible = false;
 
 	window.addEventListener( 'resize', onWindowResize, false );
