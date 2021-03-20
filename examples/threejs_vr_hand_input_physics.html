@@ -33,7 +33,7 @@ Explore physics simulations with Threejs VR hand input
 
 System requirements:
 Oculus Quest.
-Oculus Browser >10.2 (Quest update >19.0 and threejs r119).
+Oculus Browser >10.2 (Quest update >26.0 and threejs R126).
 
 "chrome://flags/#webxr" in Oculus Browser.
 "WebXR experiences with joints tracking" enabled.
@@ -46,25 +46,23 @@ Nevertheless, it is fantastic that Oculus has WebXR joints tracking in its brows
 
 References
 
+March 20, 2021 Update to Threejs R126
+
+Based on three.js vr/
+
 July 29, 2020 Threejs r119 added experimental Hand Input API support.
 
 https://github.com/mrdoob/three.js/releases/tag/r119
 
 Oculus Browser >10.2 "chrome://flags" must be changed.
 
-https://github.com/marlon360/webxr-handtracking
-
-Threejs VR hand input examples "vr / handinput" work in Oculus Browser:
+Threejs VR hand input examples "vr/handinput" work in Oculus Browser:
 
 https://threejs.org/examples/
 
 Threejs webxr_vr_handinput*.html codes to learn:
 
 https://github.com/mrdoob/three.js/tree/dev/examples
-
-July 23, 2020 Oculus added experimental WebXR Hand Input in Oculus Browser >10.2.
-
-https://twitter.com/fernandojsg/status/1286381837301022721
 
 -->
 
@@ -154,9 +152,6 @@ function init() {
 	
 	hand1 = renderer.xr.getHand( 1 );
 	hand1.add( handModelFactory.createHandModel( hand1, "boxes") );
-//	hand1.add( handModelFactory.createHandModel( hand1, "spheres") );
-//	hand1.add( handModelFactory.createHandModel( hand1, "oculus", { model: "lowpoly" } ) );
-//	hand1.add( handModelFactory.createHandModel( hand1, "oculus") );
 	scene.add( hand1 );
 
 // Hand 1
@@ -204,13 +199,13 @@ function animate() {
 
 function render() {
 
-//	trail[i].position.x = hand2.joints['index-finger-tip'].position.x;
-//	trail[i].position.y = hand2.joints['index-finger-tip'].position.y;
-//	trail[i].position.z = hand2.joints['index-finger-tip'].position.z;
+	trail[i].position.x = hand2.joints['index-finger-tip'].position.x;
+	trail[i].position.y = hand2.joints['index-finger-tip'].position.y;
+	trail[i].position.z = hand2.joints['index-finger-tip'].position.z;
 
-//	i++;
-//	if(i>99){
-//	i=0;}
+	i++;
+	if(i>99){
+	i=0;}
 
 	renderer.render(scene, camera);
 
