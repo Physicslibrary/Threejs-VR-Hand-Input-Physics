@@ -137,25 +137,25 @@ function init() {
 	scene.add( controller2 );
 
 	var controllerModelFactory = new XRControllerModelFactory();
-//	var handModelFactory = new XRHandModelFactory().setPath( "./models/" );
+	var handModelFactory = new XRHandModelFactory().setPath( "./models/" );
 
 	// Hand 1
 	controllerGrip1 = renderer.xr.getControllerGrip( 0 );
 	controllerGrip1.add( controllerModelFactory.createControllerModel( controllerGrip1 ) );
 	scene.add( controllerGrip1 );
 
-	hand1 = renderer.xr.getHand( 1 );
-	hand1.add( handModelFactory.createHandModel(hand1, "boxes") );
-	scene.add( hand1 );
+//	hand1 = renderer.xr.getHand( 1 );
+//	hand1.add( handModelFactory.createHandModel(hand1, "boxes") );
+//	scene.add( hand1 );
 
 	// Hand 2
 	controllerGrip2 = renderer.xr.getControllerGrip( 1 );
 	controllerGrip2.add( controllerModelFactory.createControllerModel( controllerGrip2 ) );
 	scene.add( controllerGrip2 );
 
-	hand2 = renderer.xr.getHand( 0 );
-	hand2.add( handModelFactory.createHandModel(hand2, "boxes") );
-	scene.add( hand2 );
+//	hand2 = renderer.xr.getHand( 0 );
+//	hand2.add( handModelFactory.createHandModel(hand2, "boxes") );
+//	scene.add( hand2 );
 
 //	geometry1 = new THREE.BoxBufferGeometry(0.01,0.01,0.01);
 //	end1 = new THREE.Mesh( geometry1, new THREE.MeshBasicMaterial({color: 0xff0000}));
