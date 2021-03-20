@@ -43,6 +43,8 @@ An example of left palm-up to make a box visible (open a menus or change variabl
 
 [https://physicslibrary.github.io/Threejs-VR-Hand-Input-Physics/examples/2-threejs_vr_hand_input_physics.html](https://physicslibrary.github.io/Threejs-VR-Hand-Input-Physics/examples/2-threejs_vr_hand_input_physics.html)
 
+[https://physicslibrary.github.io/Threejs-VR-Hand-Input-Physics/examples/3-threejs_vr_hand_input_physics.html](https://physicslibrary.github.io/Threejs-VR-Hand-Input-Physics/examples/3-threejs_vr_hand_input_physics.html)
+
 ## References
 
 July 29, 2020 Threejs r119 added experimental Hand Input API support.<br>
