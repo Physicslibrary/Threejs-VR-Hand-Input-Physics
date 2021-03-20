@@ -35,7 +35,7 @@ The .html codes in Threejs-VR-Hand-Input-Physics are developed on a Raspberry Pi
 
 [https://github.com/Physicslibrary/Threejs-WebXR-67P](https://github.com/Physicslibrary/Threejs-WebXR-67P)
 
-## 2. Threejs VR Hand Input Palm-Up Gesture
+## 2. Threejs VR Hand Input Palm-Up Gesture (not working)
 
 <img src="images/2-threejs-vr-hand-input-physics.gif" width="320">
 
