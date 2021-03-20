@@ -171,7 +171,7 @@ function init() {
 	geometry1 = new THREE.BoxBufferGeometry(0.01,0.01,0.01);
 	end1 = new THREE.Mesh( geometry1, new THREE.MeshBasicMaterial({color: 0xff0000}));
 	end1.material.wireframe = true;
-	end1.position.y = 0.02;
+//	end1.position.y = 0.02;
 //	hand1.joints['wrist'].add(end1);
 //	hand1.joints['wrist'].add(end1);
 	
@@ -210,9 +210,9 @@ function animate() {
 
 function render() {
 
-//	trail[i].position.x = hand2.joints['wrist'].position.x;
-//	trail[i].position.y = hand2.joints['wrist'].position.y;
-//	trail[i].position.z = hand2.joints['wrist'].position.z;
+	end1.position.x = hand2.joints['wrist'].position.x;
+	end1.position.y = hand2.joints['wrist'].position.y+0.02;
+	end1.position.z = hand2.joints['wrist'].position.z;
 
 //	i++;
 //	if(i>99){
