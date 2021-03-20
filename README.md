@@ -41,9 +41,9 @@ The .html codes in Threejs-VR-Hand-Input-Physics are developed on a Raspberry Pi
 
 An example of left palm-up to make a box visible (open a menus or change variables). The y-positions of two red cubes are used to compute a number when the palm is facing up.
 
-[https://physicslibrary.github.io/Threejs-VR-Hand-Input-Physics/examples/2-threejs_vr_hand_input_physics.html](https://physicslibrary.github.io/Threejs-VR-Hand-Input-Physics/examples/2-threejs_vr_hand_input_physics.html)
+// [https://physicslibrary.github.io/Threejs-VR-Hand-Input-Physics/examples/2-threejs_vr_hand_input_physics.html](https://physicslibrary.github.io/Threejs-VR-Hand-Input-Physics/examples/2-threejs_vr_hand_input_physics.html)
 
-[https://physicslibrary.github.io/Threejs-VR-Hand-Input-Physics/examples/3-threejs_vr_hand_input_physics.html](https://physicslibrary.github.io/Threejs-VR-Hand-Input-Physics/examples/3-threejs_vr_hand_input_physics.html)
+// [https://physicslibrary.github.io/Threejs-VR-Hand-Input-Physics/examples/3-threejs_vr_hand_input_physics.html](https://physicslibrary.github.io/Threejs-VR-Hand-Input-Physics/examples/3-threejs_vr_hand_input_physics.html)
 
 ## References
 
