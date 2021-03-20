@@ -51,10 +51,6 @@ July 29, 2020 Threejs r119 added experimental Hand Input API support.<br>
 
 https://github.com/mrdoob/three.js/releases/tag/r119
 
-Oculus Browser >10.2 "chrome://flags" must be changed.<br>
-
-https://github.com/marlon360/webxr-handtracking
-
 Threejs VR hand input examples "vr / handinput" work in Oculus Browser:<br>
 
 https://threejs.org/examples/
