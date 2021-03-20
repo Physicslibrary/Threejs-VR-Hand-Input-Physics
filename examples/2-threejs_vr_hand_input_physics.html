@@ -137,7 +137,7 @@ function init() {
 	scene.add( controller2 );
 
 	var controllerModelFactory = new XRControllerModelFactory();
-	var handModelFactory = new XRHandModelFactory().setPath( "./models/" );
+//	var handModelFactory = new XRHandModelFactory().setPath( "./models/" );
 
 	// Hand 1
 	
@@ -145,8 +145,8 @@ function init() {
 	controllerGrip1.add( controllerModelFactory.createControllerModel( controllerGrip1 ) );
 	scene.add( controllerGrip1 );
 
-//	hand1 = renderer.xr.getHand( 1 );
-//	hand1.add( handModelFactory.createHandModel(hand1, "boxes") );
+	hand1 = renderer.xr.getHand( 1 );
+	hand1.add( handModelFactory.createHandModel(hand1, "boxes") );
 //	scene.add( hand1 );
 
 	// Hand 2
