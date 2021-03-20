@@ -32,26 +32,20 @@ Explore physics simulations with Threejs VR hand input
 
 System requirements:
 Oculus Quest.
-Oculus Browser >10.2 (Quest update >19.0 and threejs r119).
+Oculus Browser >14.3 (Quest update >25.0 and threejs r126).
 
 "chrome://flags/#webxr" in Oculus Browser.
-"WebXR experiences with joints tracking" enabled.
-"WebXR experiences with hands tracking" disabled.
+"WebXR experiences with hand and joints tracking" enabled.
 
-The .html codes in Threejs-VR-Hand-Input-Physics use a subset of three.js r119 to start VR with joints tracking.
-Since it is experimental, it may break in future update of browser or threejs.
-Also, a controller is needed to "Enter VR".
-Nevertheless, it is fantastic that Oculus has WebXR joints tracking in its browser and three.js is making it accessible in its library.
+Threejs-VR-Hand-Input-Physics use a subset of three.js r119 to start VR with joints tracking.
+Since it is experimental, it will probably break in future update of browser or threejs.
+Fantastic that Oculus browser has WebXR joints tracking and three.js makes it accessible.
 
 References
 
 July 29, 2020 Threejs r119 added experimental Hand Input API support.
 
 https://github.com/mrdoob/three.js/releases/tag/r119
-
-Oculus Browser >10.2 "chrome://flags" must be changed.
-
-https://github.com/marlon360/webxr-handtracking
 
 Threejs VR hand input examples "vr / handinput" work in Oculus Browser:
 
@@ -60,10 +54,6 @@ https://threejs.org/examples/
 Threejs webxr_vr_handinput*.html codes to learn:
 
 https://github.com/mrdoob/three.js/tree/dev/examples
-
-July 23, 2020 Oculus added experimental WebXR Hand Input in Oculus Browser >10.2.
-
-https://twitter.com/fernandojsg/status/1286381837301022721
 
 -->
 
@@ -104,8 +94,8 @@ animate();
 
 function init() {
 
-	container = document.createElement( 'div' );
-	document.body.appendChild( container );
+//	container = document.createElement( 'div' );
+//	document.body.appendChild( container );
 
 	scene = new THREE.Scene();
 	scene.background = new THREE.Color(0x505050);
@@ -133,7 +123,8 @@ function init() {
 	renderer.shadowMap.enabled = false;
 	renderer.xr.enabled = true;
 
-	container.appendChild( renderer.domElement );
+//	container.appendChild( renderer.domElement );
+	document.body.appendChild( renderer.domElement );
 
 	document.body.appendChild( VRButton.createButton( renderer ) );
 
@@ -166,25 +157,25 @@ function init() {
 	hand2.add( handModelFactory.createHandModel(hand2, "boxes") );
 	scene.add( hand2 );
 
-//	geometry1 = new THREE.BoxBufferGeometry(0.01,0.01,0.01);
-//	end1 = new THREE.Mesh( geometry1, new THREE.MeshBasicMaterial({color: 0xff0000}));
-//	end1.material.wireframe = true;
-//	end1.position.y = 0.02;
-//	hand1.joints[XRHand.WRIST].add(end1);
+	geometry1 = new THREE.BoxBufferGeometry(0.01,0.01,0.01);
+	end1 = new THREE.Mesh( geometry1, new THREE.MeshBasicMaterial({color: 0xff0000}));
+	end1.material.wireframe = true;
+	end1.position.y = 0.02;
+	hand1.joints['WRIST'].add(end1);
 
-//	geometry2 = new THREE.BoxBufferGeometry(0.01,0.01,0.01);
-//	end2 = new THREE.Mesh( geometry2, new THREE.MeshBasicMaterial({color: 0xff0000}));
-//	end2.material.wireframe = true;
-//	end2.position.y = 0.25;
-//	hand1.joints[XRHand.WRIST].add(end2);
+	geometry2 = new THREE.BoxBufferGeometry(0.01,0.01,0.01);
+	end2 = new THREE.Mesh( geometry2, new THREE.MeshBasicMaterial({color: 0xff0000}));
+	end2.material.wireframe = true;
+	end2.position.y = 0.25;
+	hand1.joints['WRIST'].add(end2);
 	
-//	box = new THREE.EdgesGeometry(new THREE.BoxBufferGeometry(0.1,0.1,0.1));
-//	box = new THREE.LineSegments(box,new THREE.LineBasicMaterial({color: 0xffff00}));
-//	box.position.x = 0.1;
-//	box.position.y = 0.1;
-//	box.position.z = 0.15;
-//	hand1.joints[XRHand.WRIST].add(box);
-//	box.visible = false;
+	box = new THREE.EdgesGeometry(new THREE.BoxBufferGeometry(0.1,0.1,0.1));
+	box = new THREE.LineSegments(box,new THREE.LineBasicMaterial({color: 0xffff00}));
+	box.position.x = 0.1;
+	box.position.y = 0.1;
+	box.position.z = 0.15;
+	hand1.joints['WRIST'].add(box);
+	box.visible = false;
 
 	window.addEventListener( 'resize', onWindowResize, false );
 
@@ -207,12 +198,12 @@ function animate() {
 
 function render() {
 
-//    if((end2.getWorldPosition().y - end1.getWorldPosition().y) > 0.20){
-//	    box.visible = true;
-//  }
-//    if((end2.getWorldPosition().y - end1.getWorldPosition().y) < 0.20){
-//	    box.visible = false;
-//  }
+    if((end2.getWorldPosition().y - end1.getWorldPosition().y) > 0.20){
+	    box.visible = true;
+  }
+    if((end2.getWorldPosition().y - end1.getWorldPosition().y) < 0.20){
+	    box.visible = false;
+  }
 
 		renderer.render( scene, camera );
 
