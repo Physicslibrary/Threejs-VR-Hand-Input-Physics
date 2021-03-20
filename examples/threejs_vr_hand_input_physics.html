@@ -33,7 +33,7 @@ Explore physics simulations with Threejs VR hand input
 
 System requirements:
 Oculus Quest.
-Oculus Browser >10.2 (Quest update >26.0 and threejs R126).
+Oculus Browser >14.3 (Quest update >25.0 and threejs R126).
 
 "chrome://flags/#webxr" in Oculus Browser.
 "WebXR experiences with joints tracking" enabled.
@@ -101,8 +101,8 @@ animate();
 
 function init() {
 
-	container = document.createElement( 'div' );
-	document.body.appendChild( container );
+//	container = document.createElement( 'div' );
+//	document.body.appendChild( container );
 	
 	scene = new THREE.Scene();
 	scene.background = new THREE.Color(0x505050);
@@ -130,7 +130,9 @@ function init() {
 	renderer.shadowMap.enabled = false;
 	renderer.xr.enabled = true;
 
-	container.appendChild(renderer.domElement);
+//	container.appendChild(renderer.domElement);
+	document.body.appendChild(renderer.domElement);
+
 	document.body.appendChild(VRButton.createButton(renderer));
 	
 	// controllers
@@ -166,6 +168,8 @@ function init() {
 
 	window.addEventListener( 'resize', onWindowResize, false );
 
+// Make 100 boxes for trail[]
+	
 	for(i=0;i<100;i++){
 
 	var geometry = new THREE.BoxBufferGeometry(0.005,0.005,0.005);
