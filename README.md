@@ -6,30 +6,28 @@ Explore physics simulations with Threejs VR hand input
 
 ## System Requirements
 
-Oculus Quest.<br>
+Oculus Quest<br>
 
 Oculus Browser >14.3 (Quest update >25.0 and threejs r126).<br>
 
 "chrome://flags/#webxr" in Oculus Browser.<br>
-(WebXR hand and joints tracking is experimental!)<br>
+(WebXR hand and joints tracking experimental!)<br>
 "WebXR experiences with hand and joints tracking" enabled.<br>
 
 ## 1. Minimal Threejs VR Hand Input
 
 <img src="images/1-threejs-vr-hand-input-physics.gif" width="320">
 
-With an Oculus Quest, open Oculus Browser to link and "Enter VR" with index finger-thumb click. (Using controllers is not working and get a black screen. Experimenting.):<br>
+Open Oculus Browser to link and "Enter VR" with index finger-thumb click. To exit VR, use Oculus right hand gesture of facing palm with index finger and thumb touching. (Using controllers not recommended, not auto switching between controllers and hands, and dark scene. Experimenting.):<br>
 
 [https://physicslibrary.github.io/Threejs-VR-Hand-Input-Physics/examples/threejs_vr_hand_input_physics.html](https://physicslibrary.github.io/Threejs-VR-Hand-Input-Physics/examples/threejs_vr_hand_input_physics.html)
 
-(February 20, 2021.<br>
+~~(February 20, 2021.<br>
 Oculus Quest (version>25) and WebXR (https://www.w3.org/TR/webxr-hand-input-1/) updates.<br>
 "line trail[i].position.x = hand2.joints[XRHand.INDEX_PHALANX_TIP].position.x" not working and is commented out so no black screen and just display hands' joints.<br>
-Experimenting with codes to see what is working.)<br>
+Experimenting with codes to see what is working.)~~<br>
 
-To exit simulation, use Oculus Quest left hand gesture of facing palm with index finger and thumb touching.<br>
-
-The .html codes in Threejs-VR-Hand-Input-Physics use a subset of three.js r126 to start VR with experimental hand and joints tracking. Since it is experimental, it may break in future update of browser or threejs. Fantastic that Oculus has WebXR hand and joints tracking in its browser and three.js makes it accessible.<br>
+Threejs-VR-Hand-Input-Physics use a subset of three.js r126 to start VR with hand and joints tracking. Since it is experimental, it will probably break in future update of browser or threejs. Fantastic that Oculus browser has WebXR hand and joints tracking and three.js makes it accessible.<br>
 
 This example is not about physics except some kinematics. The right index finger plots 100 3D ticks. Assuming Oculus Quest 72Hz framerate (don't know sampling rate of joints tracking or time to determine joints' positions), time between each tick is ~13.9ms. The distance between two consecutive ticks is the distance the index finger moves in ~13.9ms. In the animated gif above, ticks are close together when finger accelerates (+/-) at peaks of sine wave and further apart between peaks.
 
