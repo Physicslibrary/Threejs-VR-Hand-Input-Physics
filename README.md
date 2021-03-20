@@ -18,7 +18,7 @@ Oculus Browser >14.3 (Quest update >25.0 and threejs r126).<br>
 
 <img src="images/1-threejs-vr-hand-input-physics.gif" width="320">
 
-Open Oculus Browser to link and "Enter VR" with index finger-thumb click. To exit VR, use Oculus right hand gesture of facing palm with index finger and thumb touching. (Using controllers not recommended, not auto switching between controllers and hands, and dark scene. Experimenting.):<br>
+Open Oculus Browser to link and "Enter VR" with index finger-thumb click. To exit VR, use Oculus right hand gesture of facing palm with index finger and thumb touching. (Using controllers not recommended, not auto switching between controllers and hands, and dark scene. Experimenting.)<br>
 
 [https://physicslibrary.github.io/Threejs-VR-Hand-Input-Physics/examples/threejs_vr_hand_input_physics.html](https://physicslibrary.github.io/Threejs-VR-Hand-Input-Physics/examples/threejs_vr_hand_input_physics.html)
 
