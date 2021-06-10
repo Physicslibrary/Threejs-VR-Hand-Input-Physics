@@ -2,7 +2,7 @@
 
 Explore physics simulations with Threejs VR hand input
 
-[https://physicslibrary.github.io/Threejs-VR-Hand-Input-Physics/](https://physicslibrary.github.io/Threejs-VR-Hand-Input-Physics/)
+An update of this project is https://github.com/Physicslibrary/Threejs-VR-Hand-Input
 
 ## System Requirements
 
@@ -14,7 +14,7 @@ Oculus Browser >14.3 (Quest update >25.0 and threejs r126).<br>
 (WebXR hand and joints tracking experimental!)<br>
 "WebXR experiences with hand and joints tracking" enabled.<br>
 
-## 1. Minimal Threejs VR Hand Input
+## 1. Minimal Threejs VR Hand Input (obsolete)
 
 <img src="images/1-threejs-vr-hand-input-physics.gif" width="320">
 
