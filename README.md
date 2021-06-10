@@ -2,7 +2,7 @@
 
 Explore physics simulations with Threejs VR hand input
 
-An update of this project is https://github.com/Physicslibrary/Threejs-VR-Hand-Input
+An update is https://github.com/Physicslibrary/Threejs-VR-Hand-Input
 
 ## System Requirements
 
