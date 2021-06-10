@@ -101,9 +101,6 @@ animate();
 
 function init() {
 
-//	container = document.createElement( 'div' );
-//	document.body.appendChild( container );
-	
 	scene = new THREE.Scene();
 	scene.background = new THREE.Color(0x505050);
 
@@ -130,7 +127,6 @@ function init() {
 	renderer.shadowMap.enabled = false;
 	renderer.xr.enabled = true;
 
-//	container.appendChild(renderer.domElement);
 	document.body.appendChild(renderer.domElement);
 
 	document.body.appendChild(VRButton.createButton(renderer));
@@ -203,6 +199,8 @@ function animate() {
 
 function render() {
 
+	renderer.render(scene, camera);
+	
 	trail[i].position.x = hand2.joints['index-finger-tip'].position.x;
 	trail[i].position.y = hand2.joints['index-finger-tip'].position.y;
 	trail[i].position.z = hand2.joints['index-finger-tip'].position.z;
@@ -210,8 +208,6 @@ function render() {
 	i++;
 	if(i>99){
 	i=0;}
-
-	renderer.render(scene, camera);
 
 	}
 
